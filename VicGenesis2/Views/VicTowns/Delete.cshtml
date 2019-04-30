@@ -1,0 +1,153 @@
+﻿@model VicGenesis2.Models.VicTown
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VicTown</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COMM_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMM_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Community_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Community_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funded_services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funded_services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HACC_services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HACC_services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Health_or_Human_services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Health_or_Human_services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dental_sites)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dental_sites)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Primary_schools)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Primary_schools)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distance_Service)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distance_Service)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_of_households)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_of_households)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_funded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_funded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_HACC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_HACC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_HH_services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_HH_services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_dental)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_dental)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_school)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_school)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_distance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_distance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_household)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_household)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

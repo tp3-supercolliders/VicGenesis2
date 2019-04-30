@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VicGenesis2", "VicGenesis2\VicGenesis2.csproj", "{02139272-1209-4184-9EB8-B9EB1EE6295D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02139272-1209-4184-9EB8-B9EB1EE6295D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02139272-1209-4184-9EB8-B9EB1EE6295D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02139272-1209-4184-9EB8-B9EB1EE6295D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02139272-1209-4184-9EB8-B9EB1EE6295D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {904606CD-0F4A-46A4-9EA0-2525E38250FF}
+	EndGlobalSection
+EndGlobal

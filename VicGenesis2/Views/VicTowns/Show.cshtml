@@ -1,0 +1,226 @@
+﻿@model IEnumerable<VicGenesis2.Models.VicTown>
+
+@{
+    ViewBag.Title = "Show";
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- title of site -->
+    <title>VicGenesis</title>
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="~/assets/logo/favicon.png" />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <!--linear icon css-->
+    <link rel="stylesheet" href="~/assets/css/linearicons.css">
+    <!--animate.css-->
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="~/assets/css/flaticon.css">
+    <!--slick.css-->
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <link rel="stylesheet" href="~/assets/css/slick-theme.css">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="~/assets/css/bootsnav.css">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="background-image:url(/assets/images/back.jpg)">
+
+
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top3 towns are shown below.</h2>
+                <a href="~/VicTowns/Select" style="color:blue"> <u>click here to re-select the perferences</u></a>
+
+
+
+            </div><!--/.section-header-->
+            <div align="left">
+                @*<a href="~/Victorias/SelectGroup">*@
+                <a href="~/VicTowns/Select">
+                    <button type="button" class="btn btn-warning">Back to Selection</button>
+                </a>
+            </div>
+            <div class="blog-content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6"><h3>1st</h3></div>
+                    <div class="col-md-4 col-sm-6"><h3>2nd</h3></div>
+                    <div class="col-md-4 col-sm-6"><h3>3rd</h3></div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-item">
+
+                                <div class="single-blog-item-txt">
+
+                                    <h1 style="color:brown"> Community Name:  @Html.DisplayFor(modelItem => item.Community_Name)</h1>
+                                    <h4>
+                                        Services <span>of</span> <a>funded</a>  <a> @Html.DisplayFor(modelItem => item.Funded_services)</a>
+                                    </h4>
+                                    <h4>
+                                        Services <span>of</span> <a>HACC</a>  <a> @Html.DisplayFor(modelItem => item.HACC_services)</a>
+                                    </h4>
+                                    <h4>
+                                        Services <span>of</span> <a>Health/Human</a>  <a> @Html.DisplayFor(modelItem => item.Health_or_Human_services)</a>
+                                    </h4>
+                                    <h4>
+                                        Sites <span>of</span> <a>Dental</a>  <a> @Html.DisplayFor(modelItem => item.Dental_sites)</a>
+                                    </h4>
+                                    <h4>
+                                        Distance <span>to</span> <a>health services</a>  <a> @Html.DisplayFor(modelItem => item.Distance_Service)</a>
+                                    </h4>
+                                    <h4>
+                                        Numbers <span>of</span> <a>Primary schools</a>  <a> @Html.DisplayFor(modelItem => item.Primary_schools)</a>
+                                    </h4>
+                                    <h4>
+                                        Numbers <span>of</span> <a>Households</a>  <a> @Html.DisplayFor(modelItem => item.Number_of_households)</a>
+                                    </h4>
+
+
+
+
+
+
+
+
+
+
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="col-md-4 col-sm-6">
+                                <div class="single-blog-item">
+
+                                    <div class="single-blog-item-txt">
+                                        <h2><a href="#">How to find your Desired Place more quickly</a></h2>
+                                        <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="single-blog-item">
+
+                                    <div class="single-blog-item-txt">
+                                        <h2><a href="#">How to find your Desired Place more quickly</a></h2>
+                                        <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>*@
+
+
+
+
+
+
+
+
+                    }
+
+
+
+                </div>
+            </div>
+        </div><!--/.container-->
+
+    </section>
+
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+        </div>
+
+    </div><!--/.scroll-Top-->
+    </footer><!--/.footer-->
+    <!--footer end-->
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
+    <script src="~/assets/js/jquery.js"></script>
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="~/assets/js/bootstrap.min.js"></script>
+
+    <!-- bootsnav js -->
+    <script src="~/assets/js/bootsnav.js"></script>
+    <!--feather.min.js-->
+    <script src="~/assets/js/feather.min.js"></script>
+    <!-- counter js -->
+    <script src="~/assets/js/jquery.counterup.min.js"></script>
+    <script src="~/assets/js/waypoints.min.js"></script>
+    <!--slick.min.js-->
+    <script src="~/assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="~/assets/js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
