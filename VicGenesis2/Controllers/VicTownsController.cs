@@ -153,8 +153,9 @@ namespace VicGenesis2.Controllers
         {
             Style = form["Culture"];
             Style1 = form["Culture1"];
-
-            return RedirectToAction("Result");
+           
+                return RedirectToAction("Result");
+            
         }
 
 
@@ -164,47 +165,6 @@ namespace VicGenesis2.Controllers
             ViewBag.Culture1 = Style1;
             return View(db.VicTowns.ToList());
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -228,26 +188,26 @@ namespace VicGenesis2.Controllers
 
 
             selection.Add(new SelectListItem() { Text = "Funded services", Value = "A", Selected = true });
-            selection.Add(new SelectListItem() { Text = "HACC services", Value = "B", Selected = false });
-            selection.Add(new SelectListItem() { Text = "Health/Human services", Value = "C", Selected = false });
+            selection.Add(new SelectListItem() { Text = "Humanitarian Assistance  Center", Value = "B", Selected = false });
+            selection.Add(new SelectListItem() { Text = "Health and medicine services", Value = "C", Selected = false });
             selection.Add(new SelectListItem() { Text = "Dental sites", Value = "D", Selected = false });
-            selection.Add(new SelectListItem() { Text = "Primary schools", Value = "E", Selected = false });
+            selection.Add(new SelectListItem() { Text = "Number of schools", Value = "E", Selected = false });
             selection.Add(new SelectListItem() { Text = "Distance to nearst health service", Value = "F", Selected = false });
             selection.Add(new SelectListItem() { Text = "Number of households", Value = "G", Selected = false });
 
             selection1.Add(new SelectListItem() { Text = "Funded services", Value = "A", Selected = false });
-            selection1.Add(new SelectListItem() { Text = "HACC services", Value = "B", Selected = false });
-            selection1.Add(new SelectListItem() { Text = "Health/Human services", Value = "C", Selected = true });
+            selection1.Add(new SelectListItem() { Text = "Humanitarian Assistance Center", Value = "B", Selected = false });
+            selection1.Add(new SelectListItem() { Text = "Health and medicine services", Value = "C", Selected = true });
             selection1.Add(new SelectListItem() { Text = "Dental sites", Value = "D", Selected = false });
-            selection1.Add(new SelectListItem() { Text = "Primary schools", Value = "E", Selected = false });
+            selection1.Add(new SelectListItem() { Text = "Number of schools", Value = "E", Selected = false });
             selection1.Add(new SelectListItem() { Text = "Distance to nearst health service", Value = "F", Selected = false });
             selection1.Add(new SelectListItem() { Text = "Number of households", Value = "G", Selected = false });
 
             selection2.Add(new SelectListItem() { Text = "Funded services", Value = "A", Selected = false });
-            selection2.Add(new SelectListItem() { Text = "HACC services", Value = "B", Selected = false });
-            selection2.Add(new SelectListItem() { Text = "Health/Human services", Value = "C", Selected = false });
+            selection2.Add(new SelectListItem() { Text = "Humanitarian Assistance Center", Value = "B", Selected = false });
+            selection2.Add(new SelectListItem() { Text = "Health and medicine services", Value = "C", Selected = false });
             selection2.Add(new SelectListItem() { Text = "Dental sites", Value = "D", Selected = false });
-            selection2.Add(new SelectListItem() { Text = "Primary schools", Value = "E", Selected = false });
+            selection2.Add(new SelectListItem() { Text = "Number of schools", Value = "E", Selected = false });
             selection2.Add(new SelectListItem() { Text = "Distance to nearst health service", Value = "F", Selected = false });
             selection2.Add(new SelectListItem() { Text = "Number of households", Value = "G", Selected = true });
 

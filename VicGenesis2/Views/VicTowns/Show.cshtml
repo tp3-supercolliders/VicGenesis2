@@ -16,7 +16,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!--font-family-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- title of site -->
     <title>VicGenesis</title>
     <!-- For favicon png -->
@@ -56,6 +58,12 @@
 
 <body style="background-image:url(/assets/images/back.jpg)">
 
+    @if (ViewBag.Culture == ViewBag.Culture1 || ViewBag.Culture1 == ViewBag.Culture2 || ViewBag.Culture == ViewBag.Culture2)
+    {<div class="alert alert-danger" align ="center">You may selected repeated perferences!</div>}
+
+
+
+
 
 
     <section id="blog" class="blog">
@@ -69,8 +77,8 @@
             </div><!--/.section-header-->
             <div align="left">
                 @*<a href="~/Victorias/SelectGroup">*@
-                <a href="~/VicTowns/Select">
-                    <button type="button" class="btn btn-warning">Back to Selection</button>
+                <a href="~/Home/Index">
+                    <button type="button" class="btn btn-warning">Back to Homepage</button>
                 </a>
             </div>
             <div class="blog-content">
@@ -90,10 +98,10 @@
                                         Services <span>of</span> <a>funded</a>  <a> @Html.DisplayFor(modelItem => item.Funded_services)</a>
                                     </h4>
                                     <h4>
-                                        Services <span>of</span> <a>HACC</a>  <a> @Html.DisplayFor(modelItem => item.HACC_services)</a>
+                                        Humanitarian <span></span> <a>Assistance Center</a>  @Html.DisplayFor(modelItem => item.HACC_services)
                                     </h4>
                                     <h4>
-                                        Services <span>of</span> <a>Health/Human</a>  <a> @Html.DisplayFor(modelItem => item.Health_or_Human_services)</a>
+                                        Services <span>of</span> <a>Health and medicine</a>   @Html.DisplayFor(modelItem => item.Health_or_Human_services)
                                     </h4>
                                     <h4>
                                         Sites <span>of</span> <a>Dental</a>  <a> @Html.DisplayFor(modelItem => item.Dental_sites)</a>
@@ -102,7 +110,7 @@
                                         Distance <span>to</span> <a>health services</a>  <a> @Html.DisplayFor(modelItem => item.Distance_Service)</a>
                                     </h4>
                                     <h4>
-                                        Numbers <span>of</span> <a>Primary schools</a>  <a> @Html.DisplayFor(modelItem => item.Primary_schools)</a>
+                                        Numbers <span>of</span> <a> schools</a>  <a> @Html.DisplayFor(modelItem => item.Primary_schools)</a>
                                     </h4>
                                     <h4>
                                         Numbers <span>of</span> <a>Households</a>  <a> @Html.DisplayFor(modelItem => item.Number_of_households)</a>

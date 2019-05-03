@@ -27,31 +27,73 @@
             font-size: xx-large;
         }
     </style>
+    <script>
+
+        function show() {
+            document.getElementById("div").style.display = "";
+            //alert(document.getElementById("div").style.display)
+        }
+        function hidden() {
+            document.getElementById("div").style.display = "none";
+            //alert(document.getElementById("div").style.display)
+        }
+    </script>
+
+
+
+    @if (ViewBag.Culture == ViewBag.Culture1 || ViewBag.Culture == "" || ViewBag.Culture1 == "")
+    {
+        <h1>
+
+            <div clas="container" style="padding: 1px 5px 1px; display:none">
+                <button type="button" class="btn btn-primary popover-show"
+                        title=" " data-container="body" style="display:none"></button>
+            </div>
+            <script>
+                $(function () { $('.popover-show').popover('show'); });
+                $(function () {
+                    $('.popover-show').on('shown.bs.popover', function () {
+                        alert("Please select TWO DIFFERENT suburbs!");
+                    })
+                });
+            </script>
+
+
+
+        </h1>
+    }
+
+
 
 
     <div class="container" style="margin-top: 100px;">
+
+        <div align="center">
+            <h3>Here is the comparison for<span> @ViewBag.Culture</span> and <span> @ViewBag.Culture1 </span></h3>
+            <a href="~/VicTowns/Compare" style="color:blue"> <u>click here to re-select the areas</u></a>
+
+        </div>
         <div align="left">
             @*<a href="~/Victorias/SelectGroup">*@
-            <a href="~/VicTowns/Compare">
-                <button type="button" class="btn btn-warning">Back to Selection</button>
+            <a href="~/Home/Index">
+                <button type="button" class="btn btn-warning">Back to Homepage</button>
             </a>
         </div>
-        <div align="center">
-            <h3>Here is the data for<span> @ViewBag.Culture</span> and <span> @ViewBag.Culture1 </span></h3>
-        </div>
+        <br />
+
 
         <div align="left">
-            <h3>Numbers Of Services</h3>
+            <h4>Numbers Of Services</h4>
         </div>
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="up_downs">
                     <div class="left_up_downs pull-left">
-                        <p>250</p>
-                        <p>200</p>
-                        <p>150</p>
                         <p>100</p>
-                        <p>50</p>
+                        <p>80</p>
+                        <p>60</p>
+                        <p>40</p>
+                        <p>20</p>
                         <p>0</p>
                     </div>
                     <div class="right_up_downs pull-left">
