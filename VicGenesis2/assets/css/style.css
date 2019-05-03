@@ -941,7 +941,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     position: relative;
     animation-name: example;
     animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation-
+        -count: infinite;
     animation-duration:1s;
 }
 @keyframes example {
