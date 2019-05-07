@@ -21,9 +21,15 @@
     <style>
         span {
             color: brown;
-            font-size:x-large
+            font-size: x-large
         }
     </style>
+
+    <div align="left">
+        <a href="~/Home/Index">
+            <button type="button" class="btn btn-warning">Back to Homepage</button>
+        </a>
+    </div>
 
     <div class="login_m">
         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Rank</span> the top 3 areas</h3>
@@ -73,50 +79,10 @@
                 }
             </div>
 
-
-
-
-
-
-
-
             <!--login_padding  Sign up end-->
         </div><!--login_boder end-->
-        <a href="~/Home/Index">
-
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="sub_button">Back to Homepage</button>
-        </a>
     </div><!--login_m end-->
-
-
 
 </body>
 </html>
 
-@*@using (Html.BeginForm())
-{
-    <div class="form-horizontal" align="center">
-        <h3>Search the areas with the culture group you want!</h3>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <h4>      &nbsp;Select the culture group below</h4>
-        </div>
-
-
-        <p>
-            @Html.DropDownList("Culture", null, null, new { @class = "form-control" })
-        </p>
-        <p>
-            @Html.DropDownList("Culture1", null, null, new { @class = "form-control" })
-        </p>
-        <p>
-            @Html.DropDownList("Culture2", null, null, new { @class = "form-control" })
-        </p>
-
-
-
-        <input type="submit" onclick="myFunction()" value="Submit" class="btn btn-default" />
-
-    </div>
-}*@
