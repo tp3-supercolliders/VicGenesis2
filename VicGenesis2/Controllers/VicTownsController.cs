@@ -148,6 +148,47 @@ namespace VicGenesis2.Controllers
             return View();
         }
 
+
+        //[HttpGet]
+        public ActionResult CompareExist(int? id)
+        {
+            List<SelectListItem> selection = new List<SelectListItem>();
+            List<SelectListItem> selection1 = new List<SelectListItem>();
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            VicTown vicTown = db.VicTowns.Find(id);
+          
+            if (vicTown == null)
+            {
+                return HttpNotFound();
+            }
+
+           
+
+            selection.Add(new SelectListItem() { Text = vicTown.Community_Name, Value = vicTown.Community_Name, Selected = true });
+            selection1.Add(new SelectListItem() { Text = "---Please Select---", Value = "", Selected = true });
+
+            foreach (VicTown item in db.VicTowns.ToList())
+            {
+                selection.Add(new SelectListItem() { Text = item.Community_Name, Value = item.Community_Name, Selected = false });
+                selection1.Add(new SelectListItem() { Text = item.Community_Name, Value = item.Community_Name, Selected = false });
+            }
+
+
+
+
+            ViewBag.Culture = selection;
+            ViewBag.Culture1 = selection1;
+
+            return View();
+        }
+
+
+
+
         [HttpPost]
         public ActionResult Compare(FormCollection form)
         {
@@ -157,6 +198,18 @@ namespace VicGenesis2.Controllers
                 return RedirectToAction("Result");
             
         }
+
+        [HttpPost]
+        public ActionResult CompareExist(FormCollection form)
+        {
+            Style = form["Culture"];
+            Style1 = form["Culture1"];
+
+            return RedirectToAction("Result");
+
+        }
+
+
 
 
         public ActionResult Result()
