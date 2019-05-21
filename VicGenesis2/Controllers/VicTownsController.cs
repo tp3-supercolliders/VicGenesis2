@@ -165,7 +165,6 @@ namespace VicGenesis2.Controllers
             {
                 return HttpNotFound();
             }
-
            
 
             selection.Add(new SelectListItem() { Text = vicTown.Community_Name, Value = vicTown.Community_Name, Selected = true });
@@ -178,15 +177,11 @@ namespace VicGenesis2.Controllers
             }
 
 
-
-
             ViewBag.Culture = selection;
             ViewBag.Culture1 = selection1;
 
             return View();
         }
-
-
 
 
         [HttpPost]
@@ -210,25 +205,12 @@ namespace VicGenesis2.Controllers
         }
 
 
-
-
         public ActionResult Result()
         {
             ViewBag.Culture = Style;
             ViewBag.Culture1 = Style1;
             return View(db.VicTowns.ToList());
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
         [HttpGet]
@@ -323,37 +305,7 @@ namespace VicGenesis2.Controllers
                 if (Style2.Equals("E")) { int.TryParse(item.Rank_school, out c); }
                 if (Style2.Equals("F")) { int.TryParse(item.Rank_distance, out c); }
                 if (Style2.Equals("G")) { int.TryParse(item.Rank_household, out c); }
-
-                
-                //if (Style.Equals("A"))
-                //{
-                //    int.TryParse(item.Rank_funded, out a);
-                //    if (Style1.Equals("A")) {
-                //        int.TryParse(item.Rank_funded, out b);
-                //        if (Style2.Equals("A")) { int.TryParse(item.Rank_funded, out c);}
-                //        if (Style2.Equals("B")) { int.TryParse(item.Rank_HACC, out c); }
-                //        if (Style2.Equals("C")) { int.TryParse(item.Rank_HH_services, out c); }
-                //        if (Style2.Equals("D")) { int.TryParse(item.Rank_dental, out c); }
-                //        if (Style2.Equals("E")) { int.TryParse(item.Rank_school, out c); }
-                //        if (Style2.Equals("F")) { int.TryParse(item.Rank_distance, out c); }
-                //        if (Style2.Equals("G")) { int.TryParse(item.Rank_household, out c); }
-                //    }
-
-                //    if (Style1.Equals("B")) { int.TryParse(item.Rank_HACC, out b);
-                //    }
-                //    if (Style1.Equals("C")) { int.TryParse(item.Rank_HH_services, out b); }
-                //    if (Style1.Equals("D")) { int.TryParse(item.Rank_dental, out b); }
-                //    if (Style1.Equals("E")) { int.TryParse(item.Rank_school, out b); }
-                //    if (Style1.Equals("F")) { int.TryParse(item.Rank_distance, out b); }
-                //    if (Style1.Equals("G")) { int.TryParse(item.Rank_household, out b); }
-                //}
-                //if (Style.Equals("B")) { }
-                //if (Style.Equals("C")) { }
-                //if (Style.Equals("D")) { }
-                //if (Style.Equals("E")) { }
-                //if (Style.Equals("F")) { }
-                //if (Style.Equals("G")) { }
-
+             
                 
 
                 score = a * 5 + b * 3 + c * 2;
